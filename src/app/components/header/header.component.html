@@ -10,7 +10,6 @@
     </div>
 
     <div class="hidden md:flex gap-10 items-center">
-
       <a routerLink="/"
          routerLinkActive="text-white border-b border-[#4B2C5E]/60 shadow-[0_1px_0_0_rgba(75,44,94,0.3)]"
          [routerLinkActiveOptions]="{exact: true}"
@@ -18,7 +17,7 @@
         À propos
       </a>
 
-      <a routerLink="/tarifs"
+      <a routerLink="/services"
          routerLinkActive="text-white border-b border-[#4B2C5E]/60 shadow-[0_1px_0_0_rgba(75,44,94,0.3)]"
          class="text-sm font-medium text-slate-400 hover:text-white transition-all pb-1">
         Services
@@ -30,10 +29,20 @@
       </a>
     </div>
 
-    <button class="md:hidden text-white">
+    <button (click)="toggleMenu()" class="md:hidden text-white p-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
+  </div>
+
+  <div *ngIf="isMenuOpen"
+       class="md:hidden absolute top-full left-0 w-full bg-slate-950 border-t border-slate-900 flex flex-col p-6 gap-6 shadow-2xl animate-fade-in">
+    <a routerLink="/" (click)="toggleMenu()" class="text-slate-300 hover:text-white font-medium">À propos</a>
+    <a routerLink="/services" (click)="toggleMenu()" class="text-slate-300 hover:text-white font-medium">Services</a>
+    <a routerLink="/contact" (click)="toggleMenu()" class="bg-blue-600 text-white p-4 rounded-2xl text-center font-bold shadow-lg">
+      Travaillons ensemble
+    </a>
   </div>
 </nav>

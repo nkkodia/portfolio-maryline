@@ -10,11 +10,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
   // Variable pour savoir si l'utilisateur a scrollé
-  isScrolled = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     // Si on scroll de plus de 50px, on change l'état
     this.isScrolled = window.scrollY > 50;
+  }
+  isScrolled = false;
+  isMenuOpen = false; // 1. Ajoute cette variable
+
+  // 2. Ajoute cette fonction pour basculer l'état
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
