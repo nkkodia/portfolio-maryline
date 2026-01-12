@@ -1,0 +1,35 @@
+<nav [ngClass]="isScrolled ? 'bg-slate-950/80 backdrop-blur-md py-4 shadow-2xl' : 'bg-transparent py-8'"
+     class="fixed w-full top-0 z-50 transition-all duration-500 px-6">
+
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+    <div class="text-2xl font-black tracking-tighter cursor-pointer" routerLink="/">
+      <span class="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent italic">
+        MARYLINE KOUAME-KODIA
+      </span>
+    </div>
+
+    <div class="hidden md:flex gap-10 items-center">
+      <a routerLink="/" routerLinkActive="text-blue-400" [routerLinkActiveOptions]="{exact: true}"
+         class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+        À propos
+      </a>
+      <a routerLink="/tarifs" routerLinkActive="text-blue-400"
+         class="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+        Services
+      </a>
+
+      <a routerLink="/contact"
+         class="relative group bg-blue-600 hover:bg-blue-500 px-6 py-2.5 rounded-full text-sm font-bold text-white transition-all shadow-lg shadow-blue-500/25">
+        <span class="relative z-10">Travaillons ensemble</span>
+        <div class="absolute inset-0 bg-blue-400 rounded-full scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
+      </a>
+    </div>
+
+    <button class="md:hidden text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+</nav>

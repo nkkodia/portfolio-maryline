@@ -1,0 +1,47 @@
+<section class="py-24 bg-slate-950 px-6">
+  <div class="max-w-7xl mx-auto"> <div class="text-center mb-16">
+    <h2 class="text-4xl font-black italic bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+      Solutions & Accompagnement
+    </h2>
+    <p class="text-slate-400 mt-4 max-w-2xl mx-auto italic">
+      Des solutions sur-mesure, de la vitrine personnelle à la plateforme transactionnelle complexe.
+    </p>
+  </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      @for (service of services; track service.title) {
+        <div class="group bg-slate-900/40 border border-slate-800 p-6 rounded-[2rem] hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 flex flex-col">
+
+          <div class="mb-4">
+            <i [class]="'bi ' + service.icon + ' text-3xl text-blue-500'"></i>
+          </div>
+
+          <h3 class="text-xl font-bold text-white mb-2 leading-tight">{{ service.title }}</h3>
+
+          <div class="mb-4">
+            <span class="text-emerald-400 font-black text-sm uppercase tracking-tighter">À partir de</span>
+            <div class="text-white font-bold text-lg">{{ service.price }}</div>
+          </div>
+
+          <p class="text-slate-400 text-xs mb-6 leading-relaxed flex-grow">
+            {{ service.description }}
+          </p>
+
+          <ul class="space-y-3 mb-8">
+            @for (feature of service.features; track feature) {
+              <li class="flex items-start text-[11px] text-slate-300 italic">
+                <i class="bi bi-check2 text-emerald-500 mr-2"></i>
+                {{ feature }}
+              </li>
+            }
+          </ul>
+
+          <button (click)="goToContact()"
+                  class="w-full py-3 rounded-xl bg-slate-800 text-white text-sm font-bold group-hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/20">
+            Démarrer
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</section>
