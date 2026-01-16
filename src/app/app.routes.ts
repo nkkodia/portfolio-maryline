@@ -5,7 +5,7 @@ import {ServicesComponent} from './components/services/services.component';
 
 export const routes: Routes = [
   { path: '', component: AboutComponent },         // Page d'accueil
-  { path: 'tarifs', component: ServicesComponent },
+  { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'contact', component: AboutComponent },   // On réutilise About en attendant
   { path: '**', redirectTo: '' }                   // Redirection de sécurité
