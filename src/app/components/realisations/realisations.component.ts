@@ -25,7 +25,7 @@ export class RealisationsComponent {
       category: 'Bien-être & Méditation',
       image: 'janice.png',
       link: 'https://janiceallemeyamthieu.fr/meditations',
-      tech: 'WordPress / Premium Design',
+      tech: 'Angular / Tailwind',
       desc: 'Création d’un univers zen et épuré pour une plateforme de méditations guidées. Optimisation du parcours utilisateur pour un accès fluide aux contenus audio.'
     },
     {
