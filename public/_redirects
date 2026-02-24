@@ -1,8 +1,1 @@
-# 1. Autoriser l'accès aux administrateurs sur tout le site
-/* 200!  Role=admin
-
-# 2. Rediriger les non-connectés vers la racine (où AppComponent ouvrira le widget)
-/* /index.html  401!
-
-# 3. Gestion des routes Angular (indispensable pour éviter le 404 au rafraîchissement)
 /* /index.html  200

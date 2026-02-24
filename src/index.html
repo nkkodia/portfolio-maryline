@@ -1,30 +1,15 @@
 <!doctype html>
-<html lang="fr"> <head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
-  <title>Consultante IT | Solutions Web</title> <base href="/">
+  <title>Mon PortFolio</title>
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="robots" content="noindex, nofollow">
-
   <link rel="icon" type="image/png" href="logo_portfolio.png">
-
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
   <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body class="bg-slate-950">
-<app-root></app-root>
-
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/";
-        });
-      }
-    });
-  }
-</script>
+  <app-root></app-root>
 </body>
 </html>
